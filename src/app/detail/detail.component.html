@@ -1,0 +1,13 @@
+<p>
+  detail works! id:{{detailId}} 、name:{{queryInfo.name}}、home:{{staticData.home}}
+</p>
+
+<p>
+  <a href="javascript:void(0)" [routerLink]="['./customer']">customer</a>
+  <a href="javascript:void(0)" [routerLink]="['./sales']">sales</a>
+</p>
+<p>
+   <a href="javascript:void(0)" (click)="focus = true;">关注</a>
+</p>
+
+<router-outlet></router-outlet>

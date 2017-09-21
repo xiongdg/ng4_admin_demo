@@ -1,0 +1,9 @@
+.tool-bar {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    right: 15px;
+    background-color: blue;
+    border: 1px solid #dedede;
+}

@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a [routerLink]="['/']">home component 根路由</a></h2>
+  </li>
+  <li>
+    <h2><a [routerLink]="['/other']">other component不传递参数</a></h2>
+    <h2><a [routerLink]="['/detail', 5]">detail 传递参数 id=5</a></h2>
+  </li>
+  <li>
+    <!-- ！！！统一组件之间跳转不会刷新页面 -->
+    <h2><a [routerLink]="['/detail']" [queryParams]="{id:1, name:'sss'}">queryParams传递参数 id =1</a></h2>
+    <h2><a [routerLink]="['/detail']" [queryParams]="{id:2, name:'xgq'}">queryParams传递参数 id=2</a></h2>
+
+  </li>
+  <li>
+    <h2><a [routerLink]="['/urlParam', {id:2, name:'xgq'}]">urlParam 传递复杂参数</a></h2>
+    <h2><a [routerLink]="['/urlParam2', 2]">urlParam 传递简单参数</a></h2>
+  </li>
+  <li>
+    <h2><a href="javascript:void(0)" (click)="linkToComponent()">传递简单参数</a></h2>
+    <h2><a href="javascript:void(0)" (click)="linkToComponent2()">传递复杂参数</a></h2>
+  </li>
+  <!-- 导航辅助路由 -->
+  <li>
+    <h2><a [routerLink]="[{outlets:{toolbar: 'toolbar'}}]">填充辅助路由toolbar</a></h2>
+    <h2><a [routerLink]="[{outlets:{toolbar: null}}]">清空辅助路由toolbar</a></h2>
+  </li>
+  <li>
+    <h2><a [routerLink]="[{outlets:{toolbar: 'toolbar1'}}]">填充辅助路由toolbar1</a></h2>
+    <h2><a [routerLink]="[{outlets:{toolbar: null}}]">清空辅助路由toolbar1</a></h2>
+  </li>
+</ul>
+<!-- 主要路由 -->
+<router-outlet></router-outlet>
+<!-- 辅助路由 -->
+<router-outlet name="toolbar"></router-outlet>
